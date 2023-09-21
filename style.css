@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+  --white-bg: hsla(0, 0%, 100%, 1);
+  --light-gray: hsla(240, 9%, 89%, 1);
+  --dark-gray: hsla(240, 6%, 21%, 1);
+  --color-running: rgb(99, 156, 153);
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  background-position: center;
+  background-size: cover;
+}
+
+#app {
+  display: flex;
+  max-width: 83rem;
+  gap: 19.2rem;
+}
+
+#timer span {
+  color: var(--dark-gray);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12rem;
+  font-weight: 500;
+
+  margin-bottom: 1.7rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 4.8rem;
+  color: var(--dark-gray);
+}
+
+#controls {
+  display: inline-flex;
+  gap: 40px;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-stop-circle {
+  color: var(--color-running);
+}
+
+#main {
+  background-color: var(--white-bg);
+  border-radius: 2.4rem;
+  padding: 2rem;
+  height: 25rem;
+}
+
+.card {
+  font-size: 6.4rem;
+  color: var(--dark-gray);
+
+  width: 13.8rem;
+  height: 15.2rem;
+  display: grid;
+  place-content: center;
+
+  background-color: var(--light-gray);
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+#sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.2rem;
+}
+
+.bgRain body {
+  background-image: url(./assets/images/chuva.jpg); 
+  --color-running: rgb(129, 131, 218);
+}
+
+.bgRain #main {
+  background-color: var(--light-gray);
+} 
+
+.bgRain #sounds .ph-cloud-rain {
+  color: rgb(129, 131, 218);
+  animation: shake 2s ease-out infinite;
+}
+
+.bgForest body {
+  background-image: url(./assets/images/floresta.jpg);
+  --color-running: rgb(121, 172, 39);
+}
+
+.bgForest #main {
+  background-color: var(--light-gray);
+}
+
+.bgForest #sounds .ph-tree {
+  color: rgb(121, 172, 39);
+  animation: shake 2s ease-out infinite;
+}
+
+.bgCafe body {
+  background-image: url(./assets/images/cafeteria.jpg);
+  --color-running: rgb(207, 115, 72);
+}
+
+.bgCafe #main {
+  background-color: var(--light-gray);
+}
+
+.bgCafe #sounds .ph-storefront {
+  color: rgb(207, 115, 72);
+  animation: shake 2s ease-out infinite;
+}
+
+.bgFire body {
+  background-image: url(./assets/images/fogo.jpg);
+  --color-running: rgb(216, 177, 6);
+}
+
+.bgFire #main {
+  background-color: var(--light-gray);
+}
+
+.bgFire #sounds .ph-campfire {
+  color: rgb(216, 177, 6);
+  animation: shake 2s ease-out infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

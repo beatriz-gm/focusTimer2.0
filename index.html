@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estilo pomodoro com sons">
+  <title>Focus Timer 2.0</title>
+
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+
+    <div id="main">
+
+      <div id="timer">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+
+      <div id="controls">
+        <button 
+        data-action="toggleRunning" 
+        class="ph ph-play-circle">
+          <span class="sr-only">Iniciar</span>
+        </button>
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-stop-circle">
+          <span class="sr-only">Pausar</span>
+        </button>
+        <button 
+        data-action="add5min"
+        class="ph ph-plus-circle">
+          <span class="sr-only">Acrescentar 5 minutos</span>
+        </button>
+        <button 
+        data-action="sub5min"
+        class="ph ph-minus-circle">
+          <span class="sr-only">Reduzir 5 minutos</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="sounds">
+      <div 
+      data-action="forestSound"
+      class="card ph ph-tree">
+        <span class="sr-only">ícone de árvore</span>
+      </div>
+      <div 
+      data-action="rainSound"
+      class="card ph ph-cloud-rain">
+        <span class="sr-only">ícone de chuva</span>
+      </div>
+      <div 
+      data-action="cafeSound"
+      class="card ph ph-storefront">
+        <span class="sr-only">ícone de uma tenda</span>
+      </div>
+      <div 
+      data-action="bonfireSound"
+      class="card ph ph-campfire">
+        <span class="sr-only">ícone de fogo</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
