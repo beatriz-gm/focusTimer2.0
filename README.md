@@ -8,7 +8,7 @@
   * Link da aplicação: https://beatriz-gm.github.io/focusTimer2.0/
 </p>
 
-![alt text](assets/printLayout.png "layout")
+![alt text](assets/images/printLayout.png "layout")
 
 ## Tecnologias utilizadas:
 - Figma
